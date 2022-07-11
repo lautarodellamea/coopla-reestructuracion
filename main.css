@@ -1,0 +1,182 @@
+:root {
+  --first-color: #1acd7b;
+  --white-color: #fff;
+  --black-color: #000;
+
+  --font: "Poppins", sans-serif;
+}
+
+/* ********** Reset ********** */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--white-color);
+  font-family: var(--font);
+  width: 100%;
+}
+
+/* ESTILOS DEL SITIO */
+.fondo {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.info-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo {
+  width: 100px;
+}
+
+.info-container h2 {
+  font-size: 1.5rem;
+
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.info-container h3 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: var(--white-color);
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(231, 231, 231, 0.408);
+}
+
+.info-container p {
+  margin-bottom: 0.5rem;
+}
+
+.info-container .ubicacion {
+  margin-bottom: 1rem;
+}
+
+.info-container .ubicacion a {
+  color: var(--white-color);
+}
+
+.info-container .numero-tel {
+  color: var(--first-color);
+}
+
+.info-container p a {
+  text-decoration: none;
+  color: var(--first-color);
+}
+
+.info-container .icon-me {
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.info-container .alineamiento {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.info-container i {
+  position: relative;
+  font-size: 10rem;
+  color: var(--first-color);
+  text-shadow: 5px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 150px;
+  }
+
+  .info-container h2 {
+    font-size: 2rem;
+  }
+
+  .info-container h3 {
+    font-size: 1.3rem;
+  }
+
+  .size-desktop,
+  .info-container .icon-me {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+}
